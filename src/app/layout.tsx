@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Red_Hat_Display } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Navigation/Header";
+import Header from "@/components/layouts/Header";
 import { cn } from "@/lib/utils";
+import Footer from "@/components/layouts/Footer";
 
-const redHatDisplay = Red_Hat_Display({
-  weight: ["300", "500", "600", "700"],
+const roboto = Roboto({
+  weight: ["300", "400", "500", "700", "900"],
   subsets: ["latin"],
 });
 
@@ -21,9 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(redHatDisplay.className,)}>
+      <body className={cn(roboto.className)}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
