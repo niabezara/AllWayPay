@@ -1,12 +1,13 @@
+"use client";
 import React from "react";
 import { Icons } from "@/components/shared/Icons";
+import { useMediaQuery } from "@uidotdev/usehooks";
 
 interface PartnersPaginationProps {
   pageCount: number;
   currentPage: number;
   onPageChange: (page: number) => void;
   className?: string;
-  screenWidth: number; // Pass screenWidth as prop
 }
 
 export const PartnersPagination: React.FC<PartnersPaginationProps> = ({
@@ -14,10 +15,10 @@ export const PartnersPagination: React.FC<PartnersPaginationProps> = ({
   currentPage,
   onPageChange,
   className,
-  screenWidth,
 }) => {
+  const isLargeDevice = useMediaQuery("(min-width:784px)");
   // Show 3 pages on mobile, 7 on desktop
-  const maxPages = screenWidth >= 1024 ? 7 : 3;
+  const maxPages = isLargeDevice ? 7 : 3;
   const startPage = Math.max(1, currentPage - Math.floor(maxPages / 2));
   const endPage = Math.min(pageCount, startPage + maxPages - 1);
 
