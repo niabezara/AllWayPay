@@ -75,5 +75,32 @@ export const AboutData: AboutResponse = {
       description:
         "Providing scalable and secure cloud solutions for data storage, computing, and application deployment. Our services are designed to enhance operational efficiency and support your business's growth with cutting-edge cloud technology.",
     },
+    {
+      id: 8,
+      key: "08",
+      img: "/assets/aboutimg.png",
+      name: "Liam Smith",
+      Position: "Cloud Solutions Architect",
+      description:
+        "Providing scalable and secure cloud solutions for data storage, computing, and application deployment. Our services are designed to enhance operational efficiency and support your business's growth with cutting-edge cloud technology.",
+    },
+    {
+      id: 9,
+      key: "09",
+      img: "/assets/aboutimg.png",
+      name: "Liam Smith",
+      Position: "Cloud Solutions Architect",
+      description:
+        "Providing scalable and secure cloud solutions for data storage, computing, and application deployment. Our services are designed to enhance operational efficiency and support your business's growth with cutting-edge cloud technology.",
+    },
+    {
+      id: 10,
+      key: "10",
+      img: "/assets/aboutimg.png",
+      name: "Liam Smith",
+      Position: "Cloud Solutions Architect",
+      description:
+        "Providing scalable and secure cloud solutions for data storage, computing, and application deployment. Our services are designed to enhance operational efficiency and support your business's growth with cutting-edge cloud technology.",
+    },
   ],
 };
