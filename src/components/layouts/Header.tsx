@@ -1,9 +1,7 @@
 "use client";
 import Hamburger from "hamburger-react";
-// import { useDisableBodyScroll } from "@/hooks/use-disable-scroll";
 import Navigation from "./Navigation";
 import Link from "next/link";
-
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";

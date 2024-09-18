@@ -5,11 +5,7 @@ import PartnersCard from "@/components/features/PartnersCard";
 import { AboutData, IAbout } from "@/utils/aboutData";
 import { PartnersPagination } from "@/components/features/PartnersPagination";
 
-interface Props {
-  searchParams: { [key: string]: string | string[] | undefined };
-}
-
-const AboutPage: React.FC<Props> = ({ searchParams }) => {
+const AboutPage: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [limit, setLimit] = useState(1);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
