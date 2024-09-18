@@ -4,28 +4,17 @@ import React, { useEffect, useState, useMemo } from "react";
 import PartnersCard from "@/components/features/PartnersCard";
 import { AboutData, IAbout } from "@/utils/aboutData";
 import { PartnersPagination } from "@/components/features/PartnersPagination";
+import { useMediaQuery } from "@uidotdev/usehooks";
 
 const AboutPage: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [limit, setLimit] = useState(1);
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [aboutPer, setaboutPer] = useState(AboutData.about[0]);
+  const isLargeDevice = useMediaQuery("(min-width:784px)");
+  const [limit, setLimit] = useState(1);
 
   useEffect(() => {
-    const updateScreenWidth = () => {
-      setScreenWidth(window.innerWidth);
-      if (window.innerWidth >= 1024) {
-        setLimit(4); // 4 items per page on large screens
-      } else {
-        setLimit(1); // 1 item per page on smaller screens
-      }
-    };
-
-    window.addEventListener("resize", updateScreenWidth);
-    updateScreenWidth();
-
-    return () => window.removeEventListener("resize", updateScreenWidth);
-  });
+    setLimit(isLargeDevice ? 4 : 1);
+  }, [isLargeDevice]);
 
   const paginatedData = useMemo(() => {
     const offset = (currentPage - 1) * limit;
@@ -37,9 +26,11 @@ const AboutPage: React.FC = () => {
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
   };
+
   const handleCardClick = (aboutItem: IAbout) => {
     setaboutPer(aboutItem);
   };
+
   return (
     <div className="flex flex-col items-center text-left mx-[16px] mt-[68px] max-w-[1440px] lg:mx-[120px] lg:mt-[125px] mb-[68px]">
       <h3 className="text-[#55EDFF] text-left w-full font-medium text-[20px] lg:text-[24px] leading-[23px] lg:leading-[28px] mb-[39px] lg:mb-[55px]">
@@ -62,7 +53,7 @@ const AboutPage: React.FC = () => {
         # our team
       </p>
       {/* Display paginated cards */}
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 w-full">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 w-full">
         {paginatedData.map((aboutItem) => (
           <PartnersCard
             key={aboutItem.id}
@@ -77,7 +68,7 @@ const AboutPage: React.FC = () => {
         pageCount={pageCount}
         currentPage={currentPage}
         onPageChange={handlePageChange}
-        screenWidth={screenWidth}
+        screenWidth={window.innerWidth} // If necessary, this can be handled similarly
         className="mt-8 lg:mt-12 flex items-center lg:justify-end lg:w-full"
       />
     </div>
