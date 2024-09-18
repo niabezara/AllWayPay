@@ -152,4 +152,112 @@ export const Icons = {
       </svg>
     );
   },
+  arrowleft(props: IconProps) {
+    return (
+      <svg
+        {...props}
+        width="12"
+        height={props.height || "19"}
+        viewBox="0 0 12 19"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9.5 2L2 9.5L9.5 17"
+          stroke="white"
+          strokeWidth={props.strokeWidth || "4"}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  },
+  arrowright(props: IconProps) {
+    return (
+      <svg
+        {...props}
+        width="12"
+        height={props.height || "19"}
+        viewBox="0 0 12 19"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M2.5 17L10 9.5L2.5 2"
+          stroke="white"
+          strokeWidth={props.strokeWidth || "4"}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  },
+  backarrow() {
+    return (
+      <svg
+        width="36"
+        height="12"
+        viewBox="0 0 36 12"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M2.2839 6.7519C2.43151 6.9166 2.56243 7.0622 2.69238 7.20853C3.72658 8.36974 4.76109 9.53022 5.79432 10.6929C6.12739 11.0677 6.06899 11.6386 5.67495 11.8999C5.43847 12.0566 5.11758 12.0292 4.91318 11.8184C4.72836 11.6278 4.55412 11.4238 4.37635 11.2241C2.99433 9.67222 1.61262 8.11998 0.230915 6.56774C-0.0777707 6.22103 -0.0768133 5.7781 0.232837 5.43031C1.77531 3.69787 3.31777 1.96543 4.86024 0.232984C5.20422 -0.153364 5.75389 -0.044164 5.95508 0.449223C6.0706 0.732498 6.01187 1.05902 5.79817 1.30013C5.43044 1.71495 5.06111 2.12833 4.69242 2.54243C3.90787 3.4236 3.12332 4.30478 2.33909 5.18596C2.32593 5.20074 2.31374 5.2166 2.28807 5.24831L2.39236 5.24831C4.9026 5.24831 32.7268 5.24831 35.2371 5.24759C35.3751 5.24759 35.5092 5.2584 35.634 5.33156C35.9106 5.4941 36.0537 5.84081 35.9812 6.17309C35.9058 6.51836 35.6443 6.74649 35.3183 6.74721C34.6419 6.74829 33.8541 6.74721 7.97534 6.74721C6.1091 6.74721 4.24319 6.74721 2.37696 6.74721C2.35385 6.74721 2.33107 6.74938 2.2839 6.7519Z"
+          fill="white"
+        />
+      </svg>
+    );
+  },
+  doubleArrowRight() {
+    return (
+      <svg
+        width="45"
+        height="45"
+        viewBox="0 0 45 45"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M15 15.5L22 22.5L15 29.5"
+          stroke="white"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M23 15.5L30 22.5L23 29.5"
+          stroke="white"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  },
+  doubleArrowLeft() {
+    return (
+      <svg
+        width="17"
+        height="17"
+        viewBox="0 0 17 17"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M16 15.5L9 8.5L16 1.5"
+          stroke="white"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M8 15.5L1 8.5L8 1.5"
+          stroke="white"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  },
 };

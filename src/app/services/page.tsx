@@ -1,6 +1,6 @@
 "use client";
 import { Icons } from "@/components/shared/Icons";
-import ServicesCard from "@/components/ui/ServicesCard";
+import ServicesCard from "@/components/features/ServicesCard";
 import { servicesData } from "@/utils/siteData";
 import { useState } from "react";
 
