@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(roboto.className)}>
+      <body className={cn(roboto.className, "overflow-x-hidden min-h-screen")}>
         <Header />
         {children}
         <Footer />

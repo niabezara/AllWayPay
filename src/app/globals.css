@@ -2,11 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 @layer base {
   body {
     height: 100vh;
     background-image: url("/assets/bg-mobile.png");
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  @media screen and (min-width: 758px) {
+    body {
+      background-image: url("/assets/mainbg.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
 }
