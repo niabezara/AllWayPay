@@ -1,7 +1,7 @@
 "use client";
 import { Icons } from "@/components/shared/Icons";
 import ServicesCard from "@/components/features/ServicesCard";
-import { servicesData } from "@/utils/siteData";
+import { servicesData, Service } from "@/utils/siteData";
 import { useState } from "react";
 
 const ServicePage: React.FC = ({}) => {
@@ -18,7 +18,7 @@ const ServicePage: React.FC = ({}) => {
   };
 
   // Handle card click to display selected service's title and description
-  const handleCardClick = (service: any) => {
+  const handleCardClick = (service: Service) => {
     setSelectedService(service);
   };
 

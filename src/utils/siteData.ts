@@ -20,7 +20,7 @@ export const navigationLinks = [
   },
 ] as const;
 
-interface Service {
+export interface Service {
   id: number;
   key: string;
   name: string;

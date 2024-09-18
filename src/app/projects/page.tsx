@@ -1,7 +1,7 @@
 "use client";
 import { Icons } from "@/components/shared/Icons";
 import ProjectCard from "@/components/features/ProjectCard";
-import { ProjectsData } from "@/utils/projectData";
+import { Projects, ProjectsData } from "@/utils/projectData";
 import React, { useState } from "react";
 import {
   Carousel,
@@ -15,7 +15,7 @@ function Page() {
   const [project, setProject] = useState(ProjectsData.project[0]);
 
   // Handle card click to display selected project’s title and description
-  const handleCardClick = (project: any) => {
+  const handleCardClick = (project: Projects) => {
     setProject(project);
   };
 
@@ -49,8 +49,8 @@ function Page() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="hidden lg:flex bg-[#384BFF94] text-white h-[50px] w-[50px] left-[-2rem] " />
-        <CarouselNext className="hidden lg:flex bg-[#384BFF94] text-white h-[50px] w-[50px] right-[-2rem] " />
+        <CarouselPrevious className="hidden lg:flex bg-[#384BFF94] text-white h-[50px] w-[50px] left-[-2rem] border-0 " />
+        <CarouselNext className="hidden lg:flex bg-[#384BFF94] text-white h-[50px] w-[50px] right-[-2rem] border-0" />
       </Carousel>
       <button className="hidden lg:flex gap-2 bg-[#384BFF94] px-[45px] py-[16px] text-white items-center mt-[84px] rounded-[10px]">
         <Icons.backarrow />
